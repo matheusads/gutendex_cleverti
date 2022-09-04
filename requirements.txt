@@ -1,0 +1,2 @@
+fastapi[all]
+mongoengine==0.24.2
