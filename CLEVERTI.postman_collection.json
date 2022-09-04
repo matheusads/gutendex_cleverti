@@ -1,0 +1,311 @@
+{
+	"info": {
+		"_postman_id": "f26a85b6-679b-4181-a9be-e4899aae9941",
+		"name": "CLEVERTI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Books",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8000/books",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Books Page 10",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/books?page=10",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Books Page - Invalid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/books?page=x",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "x"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Books Title Colors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/books?title=colors",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "colors"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Books Page and Title",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/books?page=1&title=colors",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "title",
+							"value": "colors"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Books Page and Title - Not found",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/books?page=2&title=colors",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						},
+						{
+							"key": "title",
+							"value": "colors"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Books By Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8000/books?book_id=97",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "book_id",
+							"value": "97"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Books By Id - Not Found",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8000/books?book_id=8000000",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "book_id",
+							"value": "8000000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Books By Id - Invalid",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8000/books?book_id=x",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "book_id",
+							"value": "x"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Review",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"book_id\": 42,\n    \"rating\": 5,\n    \"review\": \"Test Reviews\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/books/review",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"books",
+						"review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Review Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"book_id\": 42,\n    \"rating\": 5,\n    \"review\": \"Test Reviews\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/books/review",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"books",
+						"review"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
