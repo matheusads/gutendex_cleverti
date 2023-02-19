@@ -1,4 +1,4 @@
-Basic API Project to Python dev role at Cleverti/Moro Tech
+Basic API Project to Python dev role at Cleverti/Moro Tech.
 
 Tldr: Simple API that will help rate and review books.
 
