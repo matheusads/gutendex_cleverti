@@ -22,6 +22,6 @@ jobs:
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         application_name: "gutendex_cleverti"
         environment_name: "pro"
-        version_label: ${{github.run_number}}
+        version_label: ${{github.run_id}}
         region: sa-east-1
         deployment_package: deploy.zip
