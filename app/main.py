@@ -35,6 +35,10 @@ responses = {
 }
 
 
+@app.get("/")
+def get_status():
+    return {'status': 'ok'}
+
 @app.get("/books/",
          response_model=GetBooksResponse,
          responses=responses,
